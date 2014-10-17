@@ -92,6 +92,10 @@ public class RotateLayout extends ViewGroup {
     
 	@Override
     protected void dispatchDraw(Canvas canvas) {
+    	//add by shenkaige86@gmail.com
+    	//make suer the View was not clip child to padding
+    	setClipToPadding(false);
+        //end
         canvas.save();
         canvas.rotate(-angle, getWidth() / 2f, getHeight() / 2f);
         super.dispatchDraw(canvas);
